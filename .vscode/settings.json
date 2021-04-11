@@ -1,6 +1,17 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "typescript.tsdk": "node_modules/typescript/lib"
+	"editor.wordWrap": "on",
+	"editor.tabSize": 2,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.alwaysShowStatus": true,
+	"files.associations": {
+    "*.react.js": "javascriptreact",
+    "*.jsx": "javascriptreact",
+    "*.js": "javascriptreact",
+	},
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	}
 }

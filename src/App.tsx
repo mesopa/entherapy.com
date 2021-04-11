@@ -1,13 +1,15 @@
-import './App.css';
-
 import NavigationBar from './Components/NavigationBar';
 import Header from './Components/Header';
+import Main from './Components/Main';
+import Footer from './Components/Footer';
 
 function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className="font-en">
       <NavigationBar />
       <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

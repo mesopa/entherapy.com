@@ -4,7 +4,7 @@ function Footer(): JSX.Element {
       <div className="container mx-auto">
         <div className="flex justify-between">
           <div className="text-sm font-light text-white copyright">
-            Copyright © 2018 E<span className="text-primary">N</span>THERAPY
+            Copyright © 2018 E<span className="text-primary-500">N</span>THERAPY
           </div>
 
           <nav className="font-zh text-sm font-light text-white icp">

@@ -1,6 +1,22 @@
+import { useCallback } from 'react';
+
+import { useTranslation } from 'react-i18next';
+
 import logo from '../../Assets/images/entherapy-logo-orange-white-inline.svg';
 
 function NavigationBar(): JSX.Element {
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+
+  const currentLng: 'en' | 'zh' = i18n.language || window.localStorage.i18nextLng || '';
+
+  const handleLanguageOnClick = useCallback(
+    (language: string) => {
+      i18n.changeLanguage(language);
+    },
+    [i18n],
+  );
+
   return (
     <div className="fixed top-0 inset-x-0 w-full py-2 bg-secondary-500 z-50 navigationBar">
       <div className="container mx-auto px-4">
@@ -10,37 +26,37 @@ function NavigationBar(): JSX.Element {
             style={{ backgroundImage: `url("${logo}")`, height: '60px', width: '210px' }}
           />
 
-          <ul className="hidden md:flex flex-initial">
+          <ul className="hidden md:flex flex-initial items-center">
             <li className="flex-initial">
               <ul className="flex">
                 <li className="flex-initial mx-2">
                   <a href="#home" className="uppercase">
-                    Home
+                    {`${t('home')}`}
                   </a>
                 </li>
                 <li className="flex-initial mx-2">
                   <a href="#about" className="uppercase">
-                    About
+                    {`${t('about')}`}
                   </a>
                 </li>
                 <li className="flex-initial mx-2">
                   <a href="#team" className="uppercase">
-                    Team
+                    {`${t('team')}`}
                   </a>
                 </li>
                 <li className="flex-initial mx-2">
                   <a href="#clients" className="uppercase">
-                    Clients
+                    {`${t('clients')}`}
                   </a>
                 </li>
                 <li className="flex-initial mx-2">
                   <a href="#contactus" className="uppercase">
-                    Contact Us
+                    {`${t('contactus')}`}
                   </a>
                 </li>
                 <li className="flex-initial mx-2">
                   <a href="#physioacademy" className="uppercase">
-                    Physio Academy
+                    {`${t('physioacademy')}`}
                   </a>
                 </li>
               </ul>
@@ -49,14 +65,26 @@ function NavigationBar(): JSX.Element {
             <li className="flex-initial">
               <ul className="flex language">
                 <li className="flex-initial mx-2">
-                  <a href="#english" className="uppercase">
+                  <button
+                    type="button"
+                    className={`uppercase py-1 px-2 ${currentLng === 'en' && 'rounded-sm bg-primary-500'}`}
+                    onClick={() => {
+                      handleLanguageOnClick('en');
+                    }}
+                  >
                     English
-                  </a>
+                  </button>
                 </li>
                 <li className="flex-initial">
-                  <a href="#chinese" className="uppercase">
-                    简体中文
-                  </a>
+                  <button
+                    type="button"
+                    className={`uppercase py-1 px-2 ${currentLng === 'zh' && 'rounded-sm bg-primary-500'}`}
+                    onClick={() => {
+                      handleLanguageOnClick('zh');
+                    }}
+                  >
+                    中文
+                  </button>
                 </li>
               </ul>
             </li>

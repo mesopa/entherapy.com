@@ -4,7 +4,7 @@ import overlay from '../../Assets/images/entherapy-banner-one-element-one.png';
 
 function Header(): JSX.Element {
   return (
-    <header className="h-screen bg-secondary-500">
+    <header id="home" className="h-screen bg-secondary-500">
       <div
         className="w-full h-full bg-fixed bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url("${bannerBackground}")` }}

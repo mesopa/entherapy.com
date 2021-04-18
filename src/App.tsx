@@ -1,16 +1,17 @@
-import NavigationBar from './Components/NavigationBar';
-import Header from './Components/Header';
-import Main from './Components/Main';
-import Footer from './Components/Footer';
+import { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+const Home = lazy(() => import('./Pages/Home'));
 
 function App(): JSX.Element {
   return (
-    <div className="font-en">
-      <NavigationBar />
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <Router>
+      <Suspense fallback={<div />}>
+        <Switch>
+          <Route exact path="/entherapy.com" component={Home} />
+        </Switch>
+      </Suspense>
+    </Router>
   );
 }
 

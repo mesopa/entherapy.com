@@ -1,1 +1,8 @@
-{}
+{
+  "home": "home",
+  "about": "about",
+  "team": "team",
+  "clients": "clients",
+  "contactus": "contact us",
+  "physioacademy": "Physio Academy"
+}

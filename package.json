@@ -2,7 +2,7 @@
   "name": "entherapy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://mesopa.github.io/entherapy.com/",
   "dependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",

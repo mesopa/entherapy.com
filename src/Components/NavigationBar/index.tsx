@@ -3,14 +3,14 @@ import logo from '../../Assets/images/entherapy-logo-orange-white-inline.svg';
 function NavigationBar(): JSX.Element {
   return (
     <div className="fixed top-0 inset-x-0 w-full py-2 bg-secondary-500 z-50 navigationBar">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center text-sm font-light text-white">
           <div
             className="flex-initial logo"
             style={{ backgroundImage: `url("${logo}")`, height: '60px', width: '210px' }}
           />
 
-          <ul className="flex flex-initial">
+          <ul className="hidden md:flex flex-initial">
             <li className="flex-initial">
               <ul className="flex">
                 <li className="flex-initial mx-2">

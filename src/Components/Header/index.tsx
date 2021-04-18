@@ -19,8 +19,8 @@ function Header(): JSX.Element {
           >
             <div className="container h-full mx-auto">
               <div className="flex items-center w-full h-full">
-                <div className="px-24">
-                  <h1 className="text-8xl uppercase text-white">
+                <div className="px-2 md:px-24">
+                  <h1 className="text-6xl md:text-8xl uppercase text-white">
                     E<span className="text-primary-500">n</span>Therapy
                   </h1>
                   <h2 className="text-2xl font-light text-white">

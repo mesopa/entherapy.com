@@ -4,8 +4,6 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-const BASE_URL = import.meta.env.BASE_URL ? import.meta.env.BASE_URL : '';
-
 i18n
   .use(Backend)
   .use(
@@ -19,7 +17,7 @@ i18n
     compatibilityJSON: 'v3',
     backend: {
       /* translation file path */
-      loadPath: `${BASE_URL}/localization/i18n/{{ns}}/{{lng}}.json`,
+      loadPath: `/entherapy.com/localization/i18n/{{ns}}/{{lng}}.json`,
     },
 
     fallbackLng: code => {

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -39,3 +40,4 @@
     "vite-plugin-svgr": "^4.1.0"
   }
 }
+

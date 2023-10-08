@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import logo from '../../Assets/images/entherapy-logo-orange-white-inline.svg';
+import Logo from '../../Assets/images/entherapy-logo-orange-white-inline.svg?react';
 
 function NavigationBar(): JSX.Element {
   const { i18n } = useTranslation();
@@ -18,55 +18,54 @@ function NavigationBar(): JSX.Element {
   );
 
   return (
-    <div className="fixed top-0 inset-x-0 w-full py-2 bg-secondary-500 z-50 navigationBar">
-      <div className="container mx-auto px-4">
-        <nav className="flex justify-between items-center text-sm font-light text-white">
-          <div
-            className="flex-initial logo"
-            style={{ backgroundImage: `url("${logo}")`, height: '60px', width: '210px' }}
-          />
+    <div className='fixed top-0 inset-x-0 w-full py-2 bg-secondary-500 z-50 navigationBar'>
+      <div className='container mx-auto px-4'>
+        <nav className='flex justify-between items-center text-sm font-light text-white'>
+          <div className='flex-initial h-[60px] w-[210px]'>
+            <Logo />
+          </div>
 
-          <ul className="hidden md:flex flex-initial items-center">
-            <li className="flex-initial">
-              <ul className="flex">
-                <li className="flex-initial mx-2">
-                  <a href="#home" className="uppercase">
+          <ul className='hidden md:flex flex-initial items-center'>
+            <li className='flex-initial'>
+              <ul className='flex'>
+                <li className='flex-initial mx-2'>
+                  <a href='#home' className='uppercase'>
                     {`${t('home')}`}
                   </a>
                 </li>
-                <li className="flex-initial mx-2">
-                  <a href="#about" className="uppercase">
+                <li className='flex-initial mx-2'>
+                  <a href='#about' className='uppercase'>
                     {`${t('about')}`}
                   </a>
                 </li>
-                <li className="flex-initial mx-2">
-                  <a href="#team" className="uppercase">
+                <li className='flex-initial mx-2'>
+                  <a href='#team' className='uppercase'>
                     {`${t('team')}`}
                   </a>
                 </li>
-                <li className="flex-initial mx-2">
-                  <a href="#clients" className="uppercase">
+                <li className='flex-initial mx-2'>
+                  <a href='#clients' className='uppercase'>
                     {`${t('clients')}`}
                   </a>
                 </li>
-                <li className="flex-initial mx-2">
-                  <a href="#contactus" className="uppercase">
+                <li className='flex-initial mx-2'>
+                  <a href='#contactus' className='uppercase'>
                     {`${t('contactus')}`}
                   </a>
                 </li>
-                <li className="flex-initial mx-2">
-                  <a href="#physioacademy" className="uppercase">
+                <li className='flex-initial mx-2'>
+                  <a href='#physioacademy' className='uppercase'>
                     {`${t('physioacademy')}`}
                   </a>
                 </li>
               </ul>
             </li>
 
-            <li className="flex-initial">
-              <ul className="flex language">
-                <li className="flex-initial mx-2">
+            <li className='flex-initial'>
+              <ul className='flex language'>
+                <li className='flex-initial mx-2'>
                   <button
-                    type="button"
+                    type='button'
                     className={`uppercase py-1 px-2 ${currentLng === 'en' && 'rounded-sm bg-primary-500'}`}
                     onClick={() => {
                       handleLanguageOnClick('en');
@@ -75,9 +74,9 @@ function NavigationBar(): JSX.Element {
                     English
                   </button>
                 </li>
-                <li className="flex-initial">
+                <li className='flex-initial'>
                   <button
-                    type="button"
+                    type='button'
                     className={`uppercase py-1 px-2 ${currentLng === 'zh' && 'rounded-sm bg-primary-500'}`}
                     onClick={() => {
                       handleLanguageOnClick('zh');

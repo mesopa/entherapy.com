@@ -1,17 +1,28 @@
 {
-	"editor.wordWrap": "on",
-	"editor.tabSize": 2,
-	"editor.formatOnSave": false,
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
-	"eslint.alwaysShowStatus": true,
-	"files.associations": {
-    "*.react.js": "javascriptreact",
-    "*.jsx": "javascriptreact",
-    "*.js": "javascriptreact",
-	},
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
-	}
+  "css.validate": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.foldingImportsByDefault": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "eslint.packageManager": "yarn",
+  "files.exclude": {
+    "**/.stylelintcache": true,
+    "**/.eslintcache": true,
+    "**/.gitignore": true,
+    "**/.nyc_output": true,
+    "**/.vscode": true,
+    "**/build": true,
+    "**/node_modules": true,
+    "**/yarn.lock": true,
+    "**/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/build": true
+  },
+  "git.enableCommitSigning": true,
+  "javascript.format.enable": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

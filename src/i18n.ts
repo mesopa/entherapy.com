@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-const PUBLIC_URL = import.meta.env.PUBLIC_URL ? import.meta.env.PUBLIC_URL : '';
+const BASE_URL = import.meta.env.BASE_URL ? import.meta.env.BASE_URL : '';
 
 i18n
   .use(Backend)
@@ -19,7 +19,7 @@ i18n
     compatibilityJSON: 'v3',
     backend: {
       /* translation file path */
-      loadPath: `${PUBLIC_URL}/localization/i18n/{{ns}}/{{lng}}.json`,
+      loadPath: `${BASE_URL}/localization/i18n/{{ns}}/{{lng}}.json`,
     },
 
     fallbackLng: code => {
